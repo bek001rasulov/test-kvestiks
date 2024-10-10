@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.btn {
+  padding: 16px 24px;
+  background: #F77833;
+  color: white;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  box-shadow: 0 1px 3px 1px rgba(188, 66, 0, 0.15);
+  border-radius: 8px; }
+  .btn:hover {
+    background: #f6600e;
+    color: white; }
+  .btn:active {
+    background: #ee5a09; }
+  .btn:focus {
+    box-shadow: none; }
+
+.container {
+  max-width: 1136px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+header {
+  background: white;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08); }
+  header .navbar .navbar-logo {
+    padding: 8px; }
+  header .navbar .burger-icon {
+    display: none; }
+  header .navbar .navbar-menu {
+    display: flex;
+    gap: 32px; }
+    header .navbar .navbar-menu .nav-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center; }
+      header .navbar .navbar-menu .nav-item svg {
+        width: 24px;
+        height: 24px; }
+      header .navbar .navbar-menu .nav-item span {
+        color: #383838;
+        text-align: center;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; }
+  header .mobile-menu {
+    padding: 0 10px;
+    height: 0;
+    transition: height 0.1s ease-out;
+    overflow: hidden;
+    background: white; }
+    header .mobile-menu.open {
+      height: 110px;
+      transition: height 0.15s ease-in; }
+    header .mobile-menu__item {
+      display: block;
+      padding: 8px 0;
+      margin-block: 8px;
+      text-align: center; }
+      header .mobile-menu__item:hover {
+        background: #f3f3f3 !important; }
+      header .mobile-menu__item span {
+        color: #383838;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; }
+
+main {
+  background: #F5F5F5;
+  padding: 24px 0;
+  flex: 1 0 auto; }
+  main #breadcrumb .breadcrumb-item {
+    color: #424242;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; }
+  main #breadcrumb .breadcrumb-item + .breadcrumb-item {
+    padding-left: 10px; }
+    main #breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+      padding-right: 10px;
+      color: #424242; }
+  main .content {
+    margin-top: 32px; }
+    main .content #hero {
+      border-radius: 7px;
+      overflow: hidden; }
+      main .content #hero .hero-card {
+        border-radius: inherit;
+        display: flex; }
+        main .content #hero .hero-card__left {
+          width: 38.7%;
+          z-index: 1;
+          background: white;
+          padding: 32px 0 32px 24px; }
+          main .content #hero .hero-card__left .title {
+            color: #424242;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 120%;
+            white-space: nowrap; }
+          main .content #hero .hero-card__left .tags {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 19px; }
+            main .content #hero .hero-card__left .tags .badge {
+              padding: 6px 12px;
+              border-radius: 3px;
+              background: rgba(28, 28, 28, 0.05);
+              color: #383838;
+              text-align: center;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 120%; }
+          main .content #hero .hero-card__left .text {
+            color: #424242;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            margin-top: 12px; }
+        main .content #hero .hero-card__right {
+          position: relative;
+          flex-grow: 1; }
+          main .content #hero .hero-card__right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+          main .content #hero .hero-card__right .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -1px;
+            background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0) 50%); }
+    main .content #comments {
+      margin-top: 48px; }
+      main .content #comments .comments-header {
+        color: #424242;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%; }
+        main .content #comments .comments-header sup {
+          font-size: 18px;
+          font-weight: 500; }
+      main .content #comments .comments-wrapper {
+        margin-top: 24px;
+        display: flex;
+        gap: 24px;
+        overflow: auto;
+        padding-bottom: 16px;
+        /* width */
+        /* Track */
+        /* Handle */ }
+        main .content #comments .comments-wrapper::-webkit-scrollbar {
+          width: 15px;
+          height: 15px; }
+        main .content #comments .comments-wrapper::-webkit-scrollbar-track {
+          border-radius: 7px;
+          background-color: #DDDDDD; }
+        main .content #comments .comments-wrapper::-webkit-scrollbar-thumb {
+          background: #A8A8A8;
+          border-radius: 7px; }
+        main .content #comments .comments-wrapper .comment-card {
+          min-width: 261px;
+          background-color: white;
+          padding: 30px 24px;
+          border-radius: 8px;
+          min-height: 100%; }
+          main .content #comments .comments-wrapper .comment-card .date {
+            color: #868686;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; }
+          main .content #comments .comments-wrapper .comment-card .name {
+            color: #383838;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%;
+            margin-top: 16px; }
+          main .content #comments .comments-wrapper .comment-card .rating {
+            display: flex;
+            gap: 8px;
+            margin-top: 6px; }
+          main .content #comments .comments-wrapper .comment-card .title {
+            color: #383838;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            margin-top: 16px; }
+          main .content #comments .comments-wrapper .comment-card .text {
+            color: #5E5E5E;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            margin-top: 12px; }
+      main .content #comments .btn {
+        max-width: 437px;
+        width: 100%;
+        margin-top: 24px; }
+    main .content .payment-card {
+      border-radius: 8px; }
+      main .content .payment-card .card-body {
+        padding: 20px; }
+        main .content .payment-card .card-body .card-title {
+          color: rgba(56, 56, 56, 0.8);
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%; }
+        main .content .payment-card .card-body .payment-methods {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 18px; }
+        main .content .payment-card .card-body .card-text {
+          margin-top: 24px;
+          color: #383838;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; }
+          main .content .payment-card .card-body .card-text a {
+            color: #DD4E00;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-decoration: underline 1px; }
+        main .content .payment-card .card-body .btn {
+          margin-top: 24px; }
+
+@media (max-width: 360px) {
+  header .navbar .burger-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    border: none;
+    background: none; }
+    header .navbar .burger-icon span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #737373;
+      margin: 4px auto;
+      transition: 0.4s; }
+  header .navbar .navbar-menu .contacts, header .navbar .navbar-menu .blog {
+    display: none; }
+  header .navbar .navbar-menu .orders span {
+    display: none; }
+
+  #breadcrumb {
+    display: none; }
+
+  main {
+    padding: 0; }
+    main .container {
+      padding: 0; }
+    main .content {
+      margin-top: 0; }
+      main .content #hero {
+        border-radius: 0; }
+        main .content #hero .hero-card {
+          flex-direction: column; }
+          main .content #hero .hero-card__left {
+            width: 100%;
+            order: 2;
+            padding: 12px 12px 28px 12px;
+            text-align: center; }
+            main .content #hero .hero-card__left .title {
+              font-size: 28px;
+              font-style: normal;
+              font-weight: 800; }
+            main .content #hero .hero-card__left .tags {
+              justify-content: center;
+              padding: 0 24px; }
+            main .content #hero .hero-card__left .text {
+              padding: 0 4px; }
+          main .content #hero .hero-card__right .overlay {
+            background: linear-gradient(0deg, #FFF 3.43%, rgba(255, 255, 255, 0) 50%); }
+      main .content #comments {
+        padding: 0 12px; }
+      main .content .payment-card {
+        margin-top: 24px;
+        box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.15) !important; }
+        main .content .payment-card .card-body {
+          padding: 10px 12px; }
+          main .content .payment-card .card-body .card-title, main .content .payment-card .card-body .payment-methods, main .content .payment-card .card-body .card-text {
+            display: none; }
+          main .content .payment-card .card-body .btn {
+            margin: 0; } }
+
+/*# sourceMappingURL=style.css.map */
